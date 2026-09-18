@@ -1,0 +1,22 @@
+jump_go (){
+	
+	key_to_move=$1
+	exist_key_file=$(cat ~/.chpwd-recent-dirs | grep "$key_to_move")
+	
+	if [ -z $exist_key_file ]; then
+		# echo -e "[>] The key doesn't exist!"
+		return 1
+	else
+		directory=$(cat ~/.chpwd-recent-dirs | grep "$key_to_move" | awk -F: '{gsub("/", "\\/", $2); print $2}') 
+		exist_in_system=$(find $HOME -type d -wholename "$directory" -prune 2>/dev/null)
+		if [ -z $exist_in_system ]; then
+				key_dir="$key_to_move:$directory"
+				sed -i "/$key_dir/d" ~/.chpwd-recent-dirs
+				$(awk -F: '{ sub(/^[^:]*:/, NR ":"); print }' ~/.chpwd-recent-dirs > tmp && mv tmp ~/.chpwd-recent-dirs)
+			else
+				cd $(echo "$directory" | sed 's/\\//g')
+		fi
+
+	fi
+}
+
