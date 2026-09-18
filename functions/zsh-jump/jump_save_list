@@ -1,0 +1,17 @@
+jump_save_list() {
+	key=$(update_key)
+	current_dir=$PWD
+	exist_dir_in_file=$(grep -E "[0-9]+:$current_dir$" ~/.chpwd-recent-dirs)
+	
+	uid=$(stat $current_dir | grep "Uid" | awk -F: '{print $3}' | sed -e 's/[^0-9]//g')
+	gid=$(stat $current_dir | grep "Gid" | awk -F: '{print $4}' | sed -e 's/[^0-9]//g')
+	
+	if [[ "$uid" -eq 0 && "$gid" -eq 0 ]]; then
+		return 1
+	fi
+	
+	if [ -z "$exist_dir_in_file" ]; then
+		((key++))
+		echo "$key:$current_dir" >> ~/.chpwd-recent-dirs
+	fi
+}	
