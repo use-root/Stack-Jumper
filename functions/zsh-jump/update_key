@@ -1,0 +1,6 @@
+update_key() {
+	if [ ! -z ~/.chpwd-recent-dirs ]; then
+		last_key=${$(cat ~/.chpwd-recent-dirs | sed -e 's/:/ /g'| awk '{print $1}' | tail -n 1):-0}
+		echo $last_key
+	fi
+}
