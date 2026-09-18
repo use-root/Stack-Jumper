@@ -1,0 +1,23 @@
+jump() {
+  local key_arg
+  local OPTIND=1
+	while getopts "hleg:" flag "$@"; do
+		case "$flag" in
+		l) 
+			cat ~/.chpwd-recent-dirs
+			;;
+		e) 
+			echo "Enable to edit the file"
+			;;
+		g) 
+			jump_go "$OPTARG" 
+			;;
+		h) 
+			help_menu
+			;;
+		\?)
+			help_menu
+       ;;
+		esac
+	done
+}
