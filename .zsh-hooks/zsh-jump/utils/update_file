@@ -1,0 +1,5 @@
+update_file() {
+	local key="$1"
+	local file="$2"
+	awk '{ $1 = NR; print }' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
+}
