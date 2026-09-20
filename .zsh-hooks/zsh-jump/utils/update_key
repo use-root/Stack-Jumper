@@ -1,0 +1,8 @@
+update_key() {
+	local file="$HOME/.chpwd-recent-dirs"
+	local last_key
+	if [ ! -z "$file" ]; then
+		last_key=${$(awk 'END {print $1}' "$file"):-0}
+		echo "$last_key"
+	fi
+}
