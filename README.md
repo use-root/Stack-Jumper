@@ -1,6 +1,6 @@
-# Jump 
+# Jump
 
-_Go to my blog for more technical explanation:_ **[Jump ](https://use-root.github.io/zeroot.github.io/)**
+_Go to my blog for more technical explanation:_ **[Jump](https://use-root.github.io/zeroot.github.io/)**
 
 ---
 
@@ -20,10 +20,10 @@ The reason behind it is to create my own tool and add my own features and unders
 
 ##### Screenshots
 
-|                                                                          |                                                                            |
-| ------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| <img src="./Images/tool_list.png" alt="dark" style="border-radius:15%"/> | <img src="./Images/tool_clear.png" alt="dark" style="border-radius:15%"/>  |
-| <img src="./Images/tool_move.png" alt="dark" style="border-radius:15%"/> | <img src="./Images/tool_remove.png" alt="dark" style="border-radius:15%"/> |
-| <img src="./Images/tool_edit.png" alt="dark" style="border-radius:15%"/> |
+|                                                                          |                                                                             |
+| ------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
+| <img src="./Images/tool_list.png" alt="dark" style="border-radius:15%"/> | <img src="./Images/tool_clear.png" alt="dark" style="border-radius:15%"/>   |
+| <img src="./Images/tool_move.png" alt="dark" style="border-radius:15%"/> | <img src="./Images/tool_remove.png" alt="dark" style="border-radius:15%"/>  |
+| <img src="./Images/tool_edit.png" alt="dark" style="border-radius:15%"/> | <img src="./Images/tool_edit-ex.png" alt="dark" style="border-radius:15%"/> |
 
 ### How works
