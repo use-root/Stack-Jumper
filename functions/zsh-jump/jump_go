@@ -1,22 +1,26 @@
-jump_go (){
+jump_go () {
+	local key="$1"
+	local file="$HOME/.chpwd-recent-dirs"
+	local is_empty=$(du "$file" | awk '{print $1}')
+	local directory
 	
-	key_to_move=$1
-	exist_key_file=$(cat ~/.chpwd-recent-dirs | grep "$key_to_move")
-	
-	if [ -z $exist_key_file ]; then
-		# echo -e "[>] The key doesn't exist!"
-		return 1
-	else
-		directory=$(cat ~/.chpwd-recent-dirs | grep "$key_to_move" | awk -F: '{gsub("/", "\\/", $2); print $2}') 
-		exist_in_system=$(find $HOME -type d -wholename "$directory" -prune 2>/dev/null)
-		if [ -z $exist_in_system ]; then
-				key_dir="$key_to_move:$directory"
-				sed -i "/$key_dir/d" ~/.chpwd-recent-dirs
-				$(awk -F: '{ sub(/^[^:]*:/, NR ":"); print }' ~/.chpwd-recent-dirs > tmp && mv tmp ~/.chpwd-recent-dirs)
-			else
-				cd $(echo "$directory" | sed 's/\\//g')
-		fi
-
+	if [[ "$is_empty" -eq 0 ]]; then 
+		print -n "\n[*] The file it's empty, miuw \n"
+		return 1 
 	fi
-}
 
+	directory=$(search_directory "$key" "$file")
+	
+	if [[ -z "$directory" ]]; then
+		return 1
+	fi
+
+	if [[ -d "$directory" ]]; then
+		cd -- "$directory" || return 1
+		return 0
+	fi
+
+	remove_file "$key" "$file"
+	update_file "$key" "$file"
+	return 1
+}
