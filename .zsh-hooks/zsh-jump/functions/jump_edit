@@ -1,0 +1,16 @@
+jump_edit() {
+	local file="$HOME/.chpwd-recent-dirs"
+
+	if exist_bin "nvim"; then
+		nvim $file 2>/dev/null
+	elif exist_bin "vim"; then
+		vim $file 2>/dev/null
+	elif exist_bin "vi"; then
+		vi $file 2>/dev/null
+	elif exist_bin "nano"; then
+		nano $file 2>/dev/null
+	else
+		echo "I haven't been able to find a code editor"
+	fi
+
+}
