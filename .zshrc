@@ -1,7 +1,7 @@
 fpath=(
-    $HOME/.zsh/hooks/zsh-jump
-    $HOME/.zsh/hooks/zsh-jump/functions
-    $HOME/.zsh/hooks/zsh-jump/utils
+    $HOME/.zsh-hooks/zsh-jump
+    $HOME/.zsh-hooks/zsh-jump/functions
+    $HOME/.zsh-hooks/zsh-jump/utils
     $fpath
 )
 
@@ -18,5 +18,4 @@ autoload -Uz \
 		jump_clear \
 		jump_remove
 
-add-zsh-hook precmd set_prompt
 add-zsh-hook chpwd jump_save_list
