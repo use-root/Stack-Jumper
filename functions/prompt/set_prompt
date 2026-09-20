@@ -1,7 +1,0 @@
-set_prompt() {
-    if [[ $EUID -eq 0 ]]; then
-				PROMPT='%F{#c96b6b}󰈸%f %F{#c0a76b}%~%f %F{#c96b6b}#%f '
-    else
-			 PROMPT='%F{#8da7c7}󰈸%f %F{#c0a76b}%~%f %F{#9b7fa3}❯%f '
-    fi
-}
