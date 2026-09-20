@@ -1,0 +1,17 @@
+jump_clear() {
+	
+	local file="$HOME/.chpwd-recent-dirs"
+	local -l option
+	print -n "\n[!] Erase all recent directories? [y/N] "
+	read -r option
+
+	case $option in 
+		  y|yes)
+				[[ -e "$file" ]]  && : >| "$file"
+				print "[*] Recent directories cleared." 
+			;;
+			*)
+        print "[*] Cancelled."
+			;;
+	esac
+}
