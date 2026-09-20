@@ -1,10 +1,11 @@
 # Jump
 
-_Go to my blog for more technical explanation:_ **[Jump](https://use-root.github.io/zeroot.github.io/)**
+**[My Blog technical explanation](https://use-root.github.io/zeroot.github.io/)**
 
 ---
 
-Jump is a tool that allow you control your history of directories:
+Jump is a tool that lets you manage your directory history, and I plan to add more features later.
+The motivation is to build my own tool, add custom features, and gain a deeper understanding of how utilities like cdr work under the hood.
 
 - jump -l _List the directories from chpwd-recent-dirs_
 - jump -c _Clear all the file_
@@ -12,11 +13,11 @@ Jump is a tool that allow you control your history of directories:
 - jump -r {1-9} _Remove a directory from the file, with a number_
 - jump -e _Edit the directory_ in process
 
-Eventually I want to do it more effitien and with more useful feauteres
-
-The reason behind it is to create my own tool and add my own features and understanding beyond the surface how it works tools like `cdr`.
-
 ### Instalation
+
+Clone the repository,
+Give execute permition of the ./install chmod +x
+and the Execute the file
 
 ##### Screenshots
 
@@ -25,5 +26,3 @@ The reason behind it is to create my own tool and add my own features and unders
 | <img src="./Images/tool_list-file.png" alt="dark" style="border-radius:15%"/> | <img src="./Images/tool_clear.png" alt="dark" style="border-radius:15%"/>   |
 | <img src="./Images/tool_move-file.png" alt="dark" style="border-radius:15%"/> | <img src="./Images/tool_remove.png" alt="dark" style="border-radius:15%"/>  |
 | <img src="./Images/tool_edit-file.png" alt="dark" style="border-radius:15%"/> | <img src="./Images/tool_edit-ex.png" alt="dark" style="border-radius:15%"/> |
-
-### How works
