@@ -1,0 +1,16 @@
+search_directory() {
+	local key="$1"
+	local file="$2"
+
+	directory=$(
+        awk -v key="$key" '
+            $1 == key {
+                sub(/^[^[:space:]]+[[:space:]]+/, "")
+                print
+                exit
+            }
+        ' "$file"
+    )
+
+	echo "$directory"
+}
