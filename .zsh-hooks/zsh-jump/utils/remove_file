@@ -1,0 +1,5 @@
+remove_file() {
+	local key="$1"
+	local file="$2"
+	sed -i "\|^${key}[[:space:]]|d" "$file"
+}
