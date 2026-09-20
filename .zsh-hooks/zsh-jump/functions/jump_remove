@@ -1,0 +1,21 @@
+jump_remove() {
+	local key="$1"
+	local file="$HOME/.chpwd-recent-dirs"
+	local is_empty=$(du "$file" | awk '{print $1}')
+	local directory
+	
+	if [[ "$is_empty" -eq 0 ]]; then 
+		print -n "\n[*] The file its empty \n"
+		return 1 
+	fi
+
+	directory=$(search_directory "$key" "$file")
+
+	if [[ -z "$directory" ]]; then
+		return 1
+	fi
+
+	remove_file "$key" "$file"
+	update_file "$key" "$file"
+  return 0 
+}
