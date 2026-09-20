@@ -1,8 +1,9 @@
 help_menu() {
   echo -e "Usage: jump [-l] [-e] [-g key]\n"
 	echo -e "[list]: jump -l"
-	echo -e "[move dir] jump -g [1-9]"
-	#echo -e "[Edit file] jump -e\n"
 	#echo -e "[Clean file] jump -c\n"
+	echo -e "[move dir] jump -g [1-9]"
+	echo -e "[remove dir] jump -r [1-9]"
+	#echo -e "[Edit file] jump -e\n"
 	return 1
 }
