@@ -11,7 +11,7 @@ The motivation is to build my own tool, add custom features, and gain a deeper u
 - jump -c _Clear all the file_
 - jump -g {1-9} _Go to the directory that are register_
 - jump -r {1-9} _Remove a directory from the file, with a number_
-- jump -e _Edit the directory_ in process
+- jump -e _Edit the directory_
 
 ### Instalation
 
