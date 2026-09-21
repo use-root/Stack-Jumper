@@ -8,14 +8,14 @@ jump() {
 			;;
 		c) jump_clear
 			;;
+		e) 
+			jump_edit
+			;;
 		g) 
 			jump_go "$OPTARG" 
 			;;
 		r) 
 			jump_remove "$OPTARG" 
-			;;
-		e) 
-			echo "Enable to edit the file"
 			;;
 		h) 
 			help_menu
@@ -25,4 +25,3 @@ jump() {
        ;;
 		esac
 	done
-}
