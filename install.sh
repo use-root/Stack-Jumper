@@ -10,6 +10,6 @@ if [[ ! -s "$HOME/.chpwd-recent-dirs" ]]; then
 	touch "$HOME/.chpwd-recent-dirs"
 fi
 
-grep -qF '# JUMP_CONFIGURATION' ".zshrc" || cat .zshrc >> "$HOME/.zshrc"
+grep -qF '#JUMP_Config' ".zshrc" || cat .zshrc >> "$HOME/.zshrc"
 
 print "Installation complete!"
