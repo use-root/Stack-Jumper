@@ -1,10 +1,11 @@
 jump_go () {
 	local key="$1"
 	local file="$HOME/.chpwd-recent-dirs"
-	local is_empty=$(du "$file" | awk '{print $1}')
+	local is_empty=$(cat "$file")
+	
 	local directory
 	
-	if [[ "$is_empty" -eq 0 ]]; then 
+	if [[ -z "$is_empty" ]]; then 
 		print -n "\n[*] The file it's empty, miuw \n"
 		return 1 
 	fi
