@@ -7,15 +7,18 @@ fpath=(
 
 autoload -Uz \
     add-zsh-hook \
-		jump_save_list \
-		update_key \
-		update_file \
-		remove_file \
-		search_directory \
+    jump_save_list \
+    update_key \
+    update_file \
+    remove_file \
+    search_directory \
+		exist_bin \
+		is_empty \
 		help_menu \
     jump \
     jump_go \
 		jump_clear \
-		jump_remove
+		jump_remove \
+		jump_edit 
 
 add-zsh-hook chpwd jump_save_list
