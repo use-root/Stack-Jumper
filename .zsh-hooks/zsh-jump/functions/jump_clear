@@ -2,9 +2,14 @@ jump_clear() {
 	
 	local file="$HOME/.chpwd-recent-dirs"
 	local -l option
+
+	if is_empty "$1"; then 
+		print -n "\n[*] The file it's empty. Miuw \n"
+		return 1 
+	fi
+
 	print -n "\n[!] Erase all recent directories? [y/N] "
 	read -r option
-
 	case $option in 
 		  y|yes)
 				[[ -e "$file" ]]  && : >| "$file"
