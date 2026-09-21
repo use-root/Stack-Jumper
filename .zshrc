@@ -1,4 +1,4 @@
-# JUMP CONFIGURATION
+# JUMP_Config
 fpath=(
     $HOME/.zsh-hooks/zsh-jump
     $HOME/.zsh-hooks/zsh-jump/functions
