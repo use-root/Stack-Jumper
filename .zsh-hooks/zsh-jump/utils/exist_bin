@@ -1,4 +1,4 @@
 exist_bin() {
 	local path=$(type -p "$1")
-  [[ -s "$path" ]]
+  [[ ! -s "$path" ]]
 }
