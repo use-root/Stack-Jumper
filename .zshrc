@@ -1,4 +1,4 @@
-# JUMP_Config
+#JUMP_Config
 fpath=(
     $HOME/.zsh-hooks/zsh-jump
     $HOME/.zsh-hooks/zsh-jump/functions
@@ -13,7 +13,6 @@ autoload -Uz \
     update_file \
     remove_file \
     search_directory \
-		exist_bin \
 		is_empty \
 		help_menu \
     jump \
