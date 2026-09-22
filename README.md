@@ -13,11 +13,27 @@ The motivation is to build my own tool, add custom features, and gain a deeper u
 - jump -r {1-9} _Remove a directory from the file, with a number_
 - jump -e _Edit the directory_
 
-### Instalation
+### Installation
 
-Clone the repository,
-Give execute permition of the ./install chmod +x
-and the Execute the file
+This installation script is written for **zsh**. Before proceeding, please ensure that `zsh` is installed on your system and set as your primary shell.
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/use-root/Stack-Jumper.git && cd Stack-Jumper
+   ```
+
+2. Grant execution permissions to the install script:
+
+   ```bash
+   chmod +x ./install &&
+   ```
+
+3. Execute the installation file
+
+   ```bash
+    ./install
+   ```
 
 ##### Screenshots
 
@@ -26,3 +42,7 @@ and the Execute the file
 | <img src="./Images/tool_list-file.png" alt="dark" style="border-radius:15%"/> | <img src="./Images/tool_clear.png" alt="dark" style="border-radius:15%"/>   |
 | <img src="./Images/tool_move-file.png" alt="dark" style="border-radius:15%"/> | <img src="./Images/tool_remove.png" alt="dark" style="border-radius:15%"/>  |
 | <img src="./Images/tool_edit-file.png" alt="dark" style="border-radius:15%"/> | <img src="./Images/tool_edit-ex.png" alt="dark" style="border-radius:15%"/> |
+
+```
+
+```
